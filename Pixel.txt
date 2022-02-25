@@ -1,0 +1,11 @@
+API KEY = 563492ad6f91700001000001e5136fb79732471ab7864029e30d3e45
+
+ <View
+                                    style={[
+                                        styles.anim,
+                                        { display: showText ? 'none' : 'flex' },
+                                    ]}>
+                                    <Text>hasjgskks</Text>
+                                </View>
+
+animation="slideInDown" iterationCount={100} direction="alternate"

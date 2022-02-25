@@ -1,0 +1,48 @@
+step1 - cd android,cd app
+step2 - keytool -genkeypair -v -storetype PKCS12 -keystore DigiTechno.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+step3 - Go build.property and past it--
+MYAPP_UPLOAD_STORE_FILE=YourKeyName.keystore
+MYAPP_UPLOAD_KEY_ALIAS=my-key-alias
+MYAPP_UPLOAD_STORE_PASSWORD=Your Password
+MYAPP_UPLOAD_KEY_PASSWORD=Your Password
+
+step4-  Go android/app/build.gradle
+...
+android {
+    ...
+    defaultConfig { ... }
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+                storeFile file(MYAPP_UPLOAD_STORE_FILE)
+                storePassword MYAPP_UPLOAD_STORE_PASSWORD
+                keyAlias MYAPP_UPLOAD_KEY_ALIAS
+                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+            }
+        }
+    }
+    buildTypes {
+        release {
+            ...
+            signingConfig signingConfigs.release
+        }
+    }
+}
+step5 -  Go android/app/build.gradle
+def enableSeparateBuildPerCPUArchitecture = true
+def enableProguardInReleaseBuilds = true
+
+step6- CD Android and run
+./gradlew assembleRelease
+
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/dharmendra841434/NumberGuessingApp.git
+git push -u origin main
+
+
+NAVIGATION--npm install react-navigation
+                      --npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view

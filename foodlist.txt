@@ -1,0 +1,10 @@
+itly-'https://www.planetware.com/photos-large/I/italy-best-places-to-visit-florence.jpg'
+german- 'https://img.traveltriangle.com/blog/wp-content/uploads/2019/12/Frankfurt-cover_3rd-Dec.jpg'
+asian  -'https://www.silverkris.com/wp-content/uploads/2016/10/TajMahal_0.jpg'
+q & E - 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spinach-meatballs-broccolini-garlic-bread-1599499991.jpg?crop=1.00xw:0.752xh;0,0.0649xh&resize=980:*'
+ham- 'https://nitrocdn.com/PiIjbxDIKpKXSKhszOFOqCGEaXUdNaRd/assets/static/source/rev-cae89b1/wp-content/uploads/Electric-Skillet-Hamburgers-Smash-Burger-Style-1-768x1152.jpg'
+l&l-'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/wdy050121nationalmonth-003-1621446470.jpg?crop=0.793xw:0.594xh;0.151xw,0.344xh&resize=980:*'
+breakfast- 'https://www.eatthis.com/wp-content/uploads/sites/4/2021/08/breakfast-table-1.jpg?quality=82&strip=1&resize=640%2C360'
+
+summer -'https://www.wockhardthospitals.com/wp-content/uploads/2019/11/545955996910-805x503.jpg'
+french-'https://www.kids-world-travel-guide.com/images/xlouvre_ed_pichetw_shutterstock_227545819-2.jpg.pagespeed.ic.kw5ci7Ecua.jpg'

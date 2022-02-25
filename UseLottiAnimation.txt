@@ -1,0 +1,15 @@
+Step1:-	npm i --save lottie-react-native
+	npm i --save lottie-ios@3.2.3
+
+Step2:-	android/app/src/main/java/<AppName>/MainApplication.java
+
+	add import com.airbnb.android.react.lottie.LottiePackage; on the imports section
+	add packages.add(new LottiePackage()); in List<ReactPackage> getPackages();
+Step3:-	android/app/build.gradle
+	add implementation project(':lottie-react-native') in the dependencies block
+Step4:-	android/settings.gradle
+	add:
+	include ':lottie-react-native'
+project(':lottie-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/lottie-react-native/src/android')
+Step5:-	import LottieView from 'lottie-react-native';
+		<LottieView source={require('./animation.json')} autoPlay loop />;

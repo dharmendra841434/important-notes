@@ -1,0 +1,6 @@
+ install firebase - - npm install --save @react-native-firebase/app
+
+                                    Firebase Authantication
+install firebaseAuth -  npm install --save @react-native-firebase/auth
+1.GoogleAuthentication
+install GoogleSignin - npm install --save @react-native-google-signin/google-signin

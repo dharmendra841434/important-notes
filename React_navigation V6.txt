@@ -1,0 +1,8 @@
+Step1 :- npm install @react-navigation/native
+Step2 :- npm install react-native-screens react-native-safe-area-context
+Step3 :-  For StackNavigation - npm install @react-navigation/native-stack
+Step4 :- For TabNavigation - npm install @react-navigation/bottom-tabs
+Step5 :- For DrawerNavigation--npm install @react-navigation/drawer
+             also --> npm install react-native-gesture-handler react-native-reanimated
+             also -->  add the following at the top (make sure it's at the top and there's nothing else before it) of your entry file, such as index.js or App.js:
+              ---> import 'react-native-gesture-handler';

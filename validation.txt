@@ -1,0 +1,68 @@
+async function onSubmit() {
+        if (name === "") {
+            seterror("field is empty");
+        }
+        else {
+            if (email === "") {
+                seterror("field is empty");
+            }
+            else {
+                if (mob === "") {
+                    seterror("field is empty");
+                }
+                else {
+                    if (pass1 === "") {
+                        seterror("field is empty");
+                    }
+                    else {
+                        if (pass2 === "") {
+                            seterror("field is empty");
+                        }
+                        else {
+                            if (pass1 !== pass2) {
+                                seterror("Password not match");
+                            }
+                            else {
+                                console.log(name, email, mob, pass1, pass2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+
+ const [itemsH, setItemsH] = useState([
+        { label: '0', value: '0' },
+        { label: '1', value: '1' },
+        { label: '2', value: '2' },
+        { label: '3', value: '3' },
+        { label: '4', value: '4' },
+        { label: '5', value: '5' },
+        { label: '6', value: '6' },
+        { label: '7', value: '7' },
+        { label: '8', value: '8' }
+    ]);
+    const [itemsW, setItemsW] = useState([
+        { label: '0', value: '0' },
+        { label: '1', value: '1' },
+        { label: '2', value: '2' },
+        { label: '3', value: '3' },
+        { label: '4', value: '4' },
+        { label: '5', value: '5' },
+        { label: '6', value: '6' },
+        { label: '7', value: '7' },
+        { label: '8', value: '8' }
+    ]);
+    const [itemsQ, setItemsQ] = useState([
+        { label: '0', value: '0' },
+        { label: '1', value: '1' },
+        { label: '2', value: '2' },
+        { label: '3', value: '3' },
+        { label: '4', value: '4' },
+        { label: '5', value: '5' },
+        { label: '6', value: '6' },
+        { label: '7', value: '7' },
+        { label: '8', value: '8' }
+    ]);

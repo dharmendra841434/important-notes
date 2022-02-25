@@ -1,0 +1,16 @@
+step1 - Create A folder assets/fonts
+step2 - Copy and Past Font Files into Asstes/fonts folder
+step3 - add the following line into your project file Package.json
+     --   "rnpm": {
+       "assets": [
+         "./assets/fonts/"
+      ]
+     }
+step4 - create a file in root folder of project 
+       file name is --react-native.config.js and past the following lines-
+
+      -- module.exports={
+    assets:['./assets/fonts/']
+}
+
+step5 - start Cmd and go to your project folder and Run react-native link
