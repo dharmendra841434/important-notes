@@ -1,0 +1,80 @@
+import { auth, db, storage } from "../utils/dataBaseConfig";
+import {
+  doc,
+  setDoc,
+  getDoc,
+  getDocs,
+  collection,
+  addDoc,
+} from "firebase/firestore/lite";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+
+export const setDocument = async (collectionName, docName, data) => {
+  await setDoc(doc(db, collectionName, docName), data);
+};
+
+export const getSingleDocument = async (collectionName, docName) => {
+  const docRef = doc(db, collectionName, docName);
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    return docSnap.data();
+  } else {
+    // doc.data() will be undefined in this case
+    return "Data is Not Available!!";
+  }
+};
+
+export const getAllDocs = async (collectionName) => {
+  const querySnapshot = await getDocs(collection(db, collectionName));
+  let Alldata = [];
+  querySnapshot.forEach((doc) => {
+    Alldata.push({ ...doc.data(), id: doc.id });
+  });
+  return Alldata;
+};
+
+export const setDocWithDefaultID = async (collectionName, data) => {
+  const docRef = await addDoc(collection(db, collectionName), data);
+  return "data added successfully";
+};
+
+export const uploadMedia = (path, fileName) => {
+  const storageRef = ref(storage, `${path}/${fileName}`);
+  // 'file' comes from the Blob or File API
+  const url = "";
+  uploadBytes(storageRef, fileName)
+    .then(async (snapshot) => {
+      getDownloadURL(ref(storage, `${path}/${fileName}`));
+    })
+    .then((fileUrl) => console.log(fileUrl, "imageUrl"));
+};
+
+export const signIn = (email, password) => {
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      if (!user) {
+        console.log("user Not Found");
+      }
+      console.log("User Found");
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage);
+    });
+};
+
+export const logOut = () => {
+  signOut(auth)
+    .then(() => {
+      console.log("// Sign-out successful.");
+    })
+    .catch((error) => {
+      // An error happened.
+    });
+};
